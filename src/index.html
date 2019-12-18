@@ -11,21 +11,21 @@
 </head>
 
 <body>
-  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application">
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
     <fieldset class="block-field">
       <legend>Personal information</legend>
       <label class="block-for-input">Surname:
         <input type="text" name="surname" autocomplete="off" required>
-      </label><br>
+      </label>
       <label class="block-for-input">Name:
         <input type="text" name="name" autocomplete="off" required>
-      </label><br>
+      </label>
       <label class="block-for-input">How old are you?
         <input type="number" name="age" value="12" min="7" max="100">
-      </label><br>
+      </label>
       <label class="block-for-input">Full date off birth:
         <input type="date" name="birthdate">
-      </label><br>
+      </label>
       <label class="block-for-input">I accept the term of the agreement
         <input type="checkbox" name="terms">
       </label>
@@ -34,30 +34,31 @@
       <legend>Registration</legend>
       <label class="block-for-input">E-mail:
         <input type="email" name="email" placeholder="email@example.com">
-      </label><br>
+      </label>
       <label class="block-for-input">Password:
         <input type="password" name="password" minlength="8" maxlength="64">
       </label>
     </fieldset>
     <fieldset class="block-field">
       <legend>An interesting fact about you!</legend>
-      <label class="block-for-input">Do you love cats?
-        <input type="radio" name="cats">Yes
-        <input type="radio" name="cats">No
-      </label><br>
+      <div class="block-for-input">
+        Do you love cats?
+        <label for="Yes"><input type="radio" name="yesOrNo" id="Yes"> Yes</label>
+        <label for="No"><input type="radio" name="yesOrNo" id="No"> No</label>
+      </div>
       <label class="block-for-input">What is your favorite color?
         <input type="color" name="color" value="#ddd">
-      </label><br>
+      </label>
       <label class="block-for-input">What time do you go to bed?
-        <input type="time" name="time" step="any">
-      </label><br>
-      <label class="block-for-input">What are your favorite brand of cars
+        <input type="time" name="time-for-bed" step="1">
+      </label>
+      <label class="block-for-input">What are your favoritend of cars
         <select name="cars" size="4" multiple>
           <option value="bmw">BMW</option>
           <option value="audi">Audi</option>
           <option value="lada">Lada</option>
         </select>
-      </label><br>
+      </label>
       <label class="block-for-input">How do you rate our work?
         <input type="range" name="rate" value="0">
       </label>
@@ -66,7 +67,7 @@
       <legend>Additional information:</legend>
       <label class="block-for-input">Comments:
         <textarea name="comments"></textarea>
-      </label><br>
+      </label>
       <label class="block-for-input">Would you recommend us?
         <select name="recommend">
           <option value="yes">yes</option>
